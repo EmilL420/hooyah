@@ -1,0 +1,19 @@
+class Elev:
+  def __init__(self, name, age, passed, happy):
+    self.name = name
+    self.age = age
+    self.passed = passed
+    self.happy = happy
+
+
+e1 = Elev("Adam", 17, 'no', 'false')
+
+if e1.passed == e1.happy:
+  print("The student passed and is happy")
+else:
+    print("The student did not pass and he/she aint happy")
+
+print(e1.name)
+print(e1.age)
+print(e1.passed)
+print(e1.happy)
