@@ -1,0 +1,80 @@
+class Djur:
+    def __init__(self, namn):
+        self.namn = namn
+    def at(self):
+        print("djur äter för att överleva")
+    def sov(self):
+        print("Som vi människor gör så sover resten av djuren också")
+
+
+class Fordon:
+    def car(self):
+        print("")
+    def bike(self):
+        print("")
+class Sportbil(Fordon):
+    def kör(self):
+        print("Bilen kör")
+class Cyckel(Fordon):
+    def plinga(self):
+        print("Cyckeln plingar för de gående")
+
+          
+class Fagel(Djur):
+    def __init__(self, namn):
+        super().__init__(namn)
+
+class Fisk(Djur):
+    def __init__(self, namn, antalTander, maxDjup):
+        super().__init__(namn)
+        self.antalTander = antalTander
+        self.maxDjup = maxDjup 
+    def simma(self):
+        print("fisken simmar, men det gör hajen också")
+
+class Haj(Fisk):
+    def __init__(self, namn, antalTander, maxDjup, hastighet):
+        super().__init__(namn, antalTander, maxDjup)
+        self.antalTander = antalTander
+        self.maxDjup = maxDjup
+        self.hastighet = hastighet
+    def at(Djur):
+        print("Hajen äter djur i havet")
+
+        
+class Torsk(Fisk):
+    def __init__(self, namn, antalTander, hastighet, maxDjup ):
+        super().__init__(namn, antalTander, hastighet)
+        self.antalTander = antalTander
+        self.hastighet = hastighet
+        self.maxDjup = maxDjup
+
+
+
+
+s = Fagel("Skata")
+t = Torsk("Torsk", 10, 30, 100)
+h = Haj("Haj", 50, 400, 58)
+
+sup = Sportbil()
+sup.kör()
+
+sub = Cyckel()
+sub.plinga()
+
+
+
+t.hastighet = 30 
+t.maxDjup = 100
+h.hastighet = 50
+h.maxDjup = 400
+
+if t.hastighet <= 30 or t.maxDjup == h.maxDjup:
+    print("Stämmer, hajens maxhastighet är mycket större än torskens, dess maxdjup är också större och därmed så kommer torsken inte att se morgondagens ljus")
+    print("/*")
+
+
+Fisk.simma(Torsk)
+Haj.at(Djur)
+Djur.sov(Djur)
+
