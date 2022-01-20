@@ -1,6 +1,4 @@
 import tkinter as tk
-
-# Top level window
 frame = tk.Tk()
 frame.title("Skriv så härmar jag dig din Smurf")
 frame.geometry('600x400')
@@ -26,3 +24,4 @@ lbl = tk.Label(frame, text = "Denna knapp gör absolut inte så att allt du skri
 
 lbl.pack()
 frame.mainloop()
+
