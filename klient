@@ -1,0 +1,24 @@
+import time, socket, sys
+ 
+socketserver = socket.socket()
+serverhost = socket.gethostname()
+ip = socket.gethostbyname(serverhost)
+sport = 8080
+ 
+print('Detta är DIN IP-adress: ',ip)
+serverhost = input('Ange din KOMPIS IP-adress\'s IP address:')
+name = input('Ange kompisens namn: ')
+ 
+ 
+socketserver.connect((serverhost, sport))
+ 
+socketserver.send(name.encode())
+servername = socketserver.recv(1024)
+servername = servername.decode()
+ 
+print(servernamn,' har anslutit korrekt')
+while True:
+    message = (socket_server.recv(1024)).decode()
+    print(servernamn, ":", medelande)
+    message = input("Jag : ")
+    socketserver.send(message.encode())  
