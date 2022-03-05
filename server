@@ -18,8 +18,7 @@ new_socket.listen(1)
 conn, add = new_socket.accept()
  
 print("Mottagen anslutning från from ", add[0])
-print('Anslutning färdigställd. Anslutningen av: ',add[0])
- 
+print('Anslutning färdigställd. Anslutningen av: ',add[0]) 
 client = (conn.recv(1024)).decode()
 print(Klienten + ' har anslutit.')
  
