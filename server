@@ -1,0 +1,32 @@
+import time, socket, sys
+ 
+new_socket = socket.socket()
+hostname = socket.gethostname()
+s_ip = socket.gethostbyname(hostname)
+ 
+port = 8080
+ 
+new_socket.bind((hostname, port))
+print( "Lyckad anslutning”)
+print("Detta är din IP-adress: ", s_ip)
+ 
+name = input('Ange ditt namn: ')
+ 
+new_socket.listen(1) 
+ 
+ 
+conn, add = new_socket.accept()
+ 
+print("Mottagen anslutning från from ", add[0])
+print('Anslutning färdigställd. Anslutningen av: ',add[0])
+ 
+client = (conn.recv(1024)).decode()
+print(Klienten + ' har anslutit.')
+ 
+conn.send(name.encode())
+while True:
+    message = input('Me : ')
+    conn.send(message.encode())
+    message = conn.recv(1024)
+    message = message.decode()
+    print(Klient, ':', meddelande)
